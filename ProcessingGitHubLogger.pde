@@ -1,10 +1,11 @@
+
 void setup() {
-  //udpBegin();
+  udpBegin();
 }
 
 void draw() {
 }
 
 void mousePressed() {
-  log();
+  log(csvTime());
 }
