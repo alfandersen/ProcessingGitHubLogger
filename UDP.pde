@@ -5,8 +5,6 @@ UDP udp;
 
 void udpBegin() {
   udp = new UDP( this, 6000 );
-  //udp.log( true );     // <-- printout the connection activity
-  //udp.setBuffer(65507*2);
   udp.listen( true );
 }
 
