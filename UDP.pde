@@ -9,9 +9,6 @@ void udpBegin() {
 }
 
 void receive( byte[] data, String ip, int port ) {
-  StringBuilder message = new StringBuilder();
-  for (int i = 0; i < 3000; i++) {
-    message.append("2017,6,27,16,14,53\n");
-  }
-  udp.send( message.toString(), ip, port );
+  String response = pushLog();
+  udp.send(response, ip, port);
 }
