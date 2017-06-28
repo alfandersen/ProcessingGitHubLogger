@@ -1,5 +1,6 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -11,8 +12,4 @@ void log(String line){
     print("logged "+line);
   } 
   catch (IOException e) { e.printStackTrace(); }
-}
-
-String csvTime() {
-  return new SimpleDateFormat("yyyy,MM,dd,HH,mm,ss,EEEE,w\n").format(new Date());
 }

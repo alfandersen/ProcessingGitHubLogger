@@ -9,13 +9,13 @@ void udpBegin() {
 }
 
 void receive (byte[] data, String ip, int port) {
-  println(String.format("Received: %s from IP: %s PORT: %d", new String(data), ip, port));
+  println(String.format("Received: '%s' from IP: %s PORT: %d", new String(data), ip, port));
   
   BufferedReader response = pushLog();
   
   if (response != null) {
-    String out;
     try {
+      String out;
       while ((out = response.readLine()) != null) {
         udp.send(out, ip, port);
         println(out);
